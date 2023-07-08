@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:zee_tv_app/Controllers/SelectedItemController.dart';
 import 'package:zee_tv_app/Screens/Settings/About.dart';
 import 'package:zee_tv_app/Screens/Settings/Account.dart';
+import 'package:zee_tv_app/Screens/Settings/Help.dart';
 import 'package:zee_tv_app/Screens/Settings/Subtitles.dart';
 
 class SettingsPage extends StatelessWidget {
@@ -111,7 +112,8 @@ class SettingsPage extends StatelessWidget {
                         Expanded(
                           child: Container(
                             child: Align(
-                                alignment: Alignment.topCenter, child: About()),
+                                alignment: Alignment.topCenter,
+                                child: HelpAndSupport()),
                           ),
                         )
                     ],

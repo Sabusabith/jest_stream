@@ -34,34 +34,32 @@ class Movies extends StatelessWidget {
                       SizedBox(
                         width: 10,
                       ),
-                      Obx(
-                        () => InkWell(
-                          focusColor: Colors.white,
-                          autofocus: true,
-                          borderRadius: BorderRadius.circular(15),
-                          customBorder:
-                              selectedItemController.selectedshow.value == index
-                                  ? Border.all(color: Colors.white, width: 3)
-                                  : Border.all(),
-                          onTap: () {
-                            selectedItemController.selectedmovietoggle(index);
-                          },
+                      InkWell(
+                        focusColor: Color.fromARGB(255, 201, 193, 193),
+                        autofocus: true,
+                        borderRadius: BorderRadius.circular(15),
+                        // customBorder:
+                        //     selectedItemController.selectedshow.value == index
+                        //         ? Border.all(color: Colors.white, width: 3)
+                        //         : Border.all(),
+                        onTap: () {
+                          selectedItemController.selectedmovietoggle(index);
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.all(3.0),
                           child: Container(
                               width: size.width / 2.2,
-                              child: Padding(
-                                padding: const EdgeInsets.all(5.0),
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(15),
-                                  child: Image(
-                                    image: AssetImage(
-                                      ListviewItems().moviesList[index],
-                                    ),
-                                    fit: BoxFit.cover,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(15),
+                                child: Image(
+                                  image: AssetImage(
+                                    ListviewItems().moviesList[index],
                                   ),
+                                  fit: BoxFit.cover,
                                 ),
                               )),
                         ),
-                      )
+                      ),
                     ],
                   );
                 },
@@ -93,19 +91,20 @@ class Movies extends StatelessWidget {
                       SizedBox(
                         width: 10,
                       ),
-                      Obx(
-                        () => InkWell(
-                          focusColor: Colors.white,
-                          autofocus: true,
-                          borderRadius: BorderRadius.circular(5),
-                          customBorder:
-                              selectedItemController.selectedItem3.value ==
-                                      index
-                                  ? Border.all(color: Colors.white, width: 3)
-                                  : Border.all(),
-                          onTap: () {
-                            selectedItemController.toggle3(index);
-                          },
+                      InkWell(
+                        focusColor: Color.fromARGB(255, 201, 193, 193),
+                        autofocus: true,
+                        borderRadius: BorderRadius.circular(5),
+                        // customBorder:
+                        //     selectedItemController.selectedItem3.value ==
+                        //             index
+                        //         ? Border.all(color: Colors.white, width: 3)
+                        //         : Border.all(),
+                        onTap: () {
+                          selectedItemController.toggle3(index);
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.all(5.0),
                           child: Container(
                               width: 100,
                               height: 180,

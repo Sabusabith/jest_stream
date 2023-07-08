@@ -20,17 +20,18 @@ class FavMovies extends StatelessWidget {
             mainAxisSpacing: 25),
         itemCount: ListviewItems().favmovieList.length,
         itemBuilder: (BuildContext ctx, index) {
-          return Obx(
-            () => InkWell(
-              focusColor: Colors.white,
-              autofocus: true,
-              borderRadius: BorderRadius.circular(5),
-              customBorder: favTabController.selectedfavemov.value == index
-                  ? Border.all(color: Colors.white, width: 3)
-                  : Border.all(),
-              onTap: () {
-                favTabController.selectedMovie(index);
-              },
+          return InkWell(
+            focusColor: Color.fromARGB(255, 201, 193, 193),
+            autofocus: true,
+            borderRadius: BorderRadius.circular(5),
+            // customBorder: favTabController.selectedfavemov.value == index
+            //     ? Border.all(color: Colors.white, width: 3)
+            //     : Border.all(),
+            onTap: () {
+              favTabController.selectedMovie(index);
+            },
+            child: Padding(
+              padding: const EdgeInsets.all(5.0),
               child: Container(
                 width: 100,
                 height: 100,

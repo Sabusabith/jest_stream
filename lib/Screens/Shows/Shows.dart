@@ -28,34 +28,32 @@ class Shows extends StatelessWidget {
                     SizedBox(
                       width: 10,
                     ),
-                    Obx(
-                      () => InkWell(
-                        focusColor: Colors.white,
-                        autofocus: true,
-                        borderRadius: BorderRadius.circular(15),
-                        customBorder:
-                            selectedItemController.selectedshow.value == index
-                                ? Border.all(color: Colors.white, width: 3)
-                                : Border.all(),
-                        onTap: () {
-                          selectedItemController.selectedshowtoggle(index);
-                        },
+                    InkWell(
+                      focusColor: Color.fromARGB(255, 201, 193, 193),
+                      autofocus: true,
+                      borderRadius: BorderRadius.circular(15),
+                      // customBorder:
+                      //     selectedItemController.selectedshow.value == index
+                      //         ? Border.all(color: Colors.white, width: 3)
+                      //         : Border.all(),
+                      onTap: () {
+                        selectedItemController.selectedshowtoggle(index);
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.all(3.0),
                         child: Container(
                             width: size.width / 2.2,
-                            child: Padding(
-                              padding: const EdgeInsets.all(5.0),
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(15),
-                                child: Image(
-                                  image: AssetImage(
-                                    ListviewItems().showList[index],
-                                  ),
-                                  fit: BoxFit.cover,
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(15),
+                              child: Image(
+                                image: AssetImage(
+                                  ListviewItems().showList[index],
                                 ),
+                                fit: BoxFit.cover,
                               ),
                             )),
                       ),
-                    )
+                    ),
                   ],
                 );
               },
@@ -84,31 +82,26 @@ class Shows extends StatelessWidget {
               itemBuilder: (context, index) {
                 return Row(
                   children: [
-                    Obx(
-                      () => InkWell(
-                        autofocus: true,
-                        onTap: () {
-                          selectedItemController.toggle3(index);
-                        },
-                        child: Container(
-                            decoration: BoxDecoration(
-                              border: selectedItemController
-                                          .selectedItem3.value ==
-                                      index
-                                  ? Border.all(color: Colors.white, width: 3)
-                                  : Border.all(),
-                              borderRadius: BorderRadius.circular(5),
-                            ),
-                            margin: EdgeInsets.only(right: 10),
-                            width: 100,
-                            height: 180,
-                            child: Image(
-                              image: AssetImage(
-                                  ListviewItems().popularList[index]),
-                              fit: BoxFit.cover,
-                            )),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    InkWell(
+                      autofocus: true,
+                      borderRadius: BorderRadius.circular(5),
+                      focusColor: Color.fromARGB(255, 201, 193, 193),
+                      onTap: () {
+                        selectedItemController.toggle3(index);
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.all(5.0),
+                        child: Image(
+                          image: AssetImage(ListviewItems().popularList[index]),
+                          fit: BoxFit.cover,
+                          width: 100,
+                          height: 180,
+                        ),
                       ),
-                    )
+                    ),
                   ],
                 );
               },

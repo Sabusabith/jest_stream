@@ -73,6 +73,45 @@ class ListviewItems {
     "Assets/Images/img5.png",
     "Assets/Images/img4.png",
   ];
+  List<String> cast = [
+    "Assets/Images/cast1.png",
+    "Assets/Images/cast2.png",
+    "Assets/Images/cast3.png",
+    "Assets/Images/cast4.png",
+    "Assets/Images/cast5.png",
+    "Assets/Images/cast6.png",
+  ];
+  List<List<int>> nestedList = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+  ];
+  List<List<String>> nested = [
+    [
+      "Assets/Images/img1.png",
+      "Assets/Images/img2.png",
+      "Assets/Images/img8.png",
+      "Assets/Images/img9.png",
+      "Assets/Images/img10.png",
+      "Assets/Images/img9.png",
+      "Assets/Images/img10.png",
+      "Assets/Images/img1.png",
+      "Assets/Images/img2.png",
+      "Assets/Images/img8.png",
+    ],
+    [
+      "Assets/Images/img1.png",
+      "Assets/Images/img2.png",
+      "Assets/Images/img8.png",
+      "Assets/Images/img9.png",
+      "Assets/Images/img10.png",
+      "Assets/Images/img9.png",
+      "Assets/Images/img10.png",
+      "Assets/Images/img1.png",
+      "Assets/Images/img2.png",
+      "Assets/Images/img8.png",
+    ]
+  ];
 
   final List<Gradient> gradientList = [
     const LinearGradient(

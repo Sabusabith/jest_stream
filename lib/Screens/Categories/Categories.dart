@@ -21,17 +21,18 @@ class Categories extends StatelessWidget {
             mainAxisSpacing: 25),
         itemCount: 11,
         itemBuilder: (BuildContext ctx, index) {
-          return Obx(
-            () => InkWell(
-              focusColor: Color.fromARGB(255, 206, 206, 206),
-              borderRadius: BorderRadius.circular(5),
-              customBorder: selectedItemController.selectedcate.value == index
-                  ? Border.all(color: Colors.white, width: 10)
-                  : Border.all(),
-              onTap: () {
-                selectedItemController.selectedtoggle(index);
-              },
-              autofocus: true,
+          return InkWell(
+            focusColor: Color.fromARGB(255, 210, 203, 203),
+            borderRadius: BorderRadius.circular(5),
+            // customBorder: selectedItemController.selectedcate.value == index
+            //     ? Border.all(color: Colors.white, width: 10)
+            //     : Border.all(),
+            onTap: () {
+              selectedItemController.selectedtoggle(index);
+            },
+            autofocus: true,
+            child: Padding(
+              padding: const EdgeInsets.all(5.0),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(25),
                 child: Container(
