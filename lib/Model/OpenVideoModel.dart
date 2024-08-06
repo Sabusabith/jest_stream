@@ -35,29 +35,29 @@ class OpenVideoModel {
 }
 
 class Movie {
-  int? id;
-  LanguageDetail? languageDetail;
+  dynamic id;
+  dynamic languageDetail;
   dynamic categoryDetail;
   List<dynamic>? metaTags;
-  List<VideoClass>? videos;
-  VideoClass? video;
-  Message? message;
-  String? name;
-  String? slug;
-  String? description;
-  String? type;
+  List<dynamic>? videos;
+  dynamic video;
+  dynamic message;
+  dynamic name;
+  dynamic slug;
+  dynamic description;
+  dynamic type;
   dynamic totalLength;
-  String? collectionId;
-  String? thumbnail;
+  dynamic collectionId;
+  dynamic thumbnail;
   dynamic mobileThumbnail;
-  FreeVideo? freeVideo;
-  Video? rentVideo;
-  String? status;
-  DateTime? createdOn;
-  DateTime? updatedOn;
+  dynamic freeVideo;
+  dynamic rentVideo;
+  dynamic status;
+  dynamic createdOn;
+  dynamic updatedOn;
   dynamic admin;
-  int? category;
-  int? language;
+  dynamic category;
+  dynamic language;
   List<dynamic>? specs;
 
   Movie({
@@ -166,11 +166,11 @@ class Movie {
 }
 
 class CategoryDetail {
-  int? id;
-  int? links;
-  String? name;
-  DateTime? createdOn;
-  DateTime? updatedOn;
+  dynamic id;
+  dynamic links;
+  dynamic name;
+  dynamic createdOn;
+  dynamic updatedOn;
   dynamic admin;
 
   CategoryDetail({
@@ -222,12 +222,12 @@ class FreeVideo {
 }
 
 class LanguageDetail {
-  int? id;
-  String? name;
-  String? code;
-  String? position;
-  DateTime? createdOn;
-  DateTime? updatedOn;
+  dynamic id;
+  dynamic name;
+  dynamic code;
+  dynamic position;
+  dynamic createdOn;
+  dynamic updatedOn;
   dynamic admin;
 
   LanguageDetail({
@@ -279,19 +279,19 @@ class Video {
 }
 
 class VideoClass {
-  int? id;
-  String? videoUrlPlayer;
-  String? name;
+  dynamic id;
+  dynamic videoUrlPlayer;
+  dynamic name;
   dynamic videoUrl;
-  String? videoGuid;
-  Response? response;
-  int? oredrBy;
+  dynamic videoGuid;
+  dynamic response;
+  dynamic oredrBy;
   dynamic length;
   dynamic thumbnail;
-  Message? status;
-  DateTime? createdOn;
-  DateTime? updatedOn;
-  int? movie;
+  dynamic status;
+  dynamic createdOn;
+  dynamic updatedOn;
+  dynamic movie;
 
   VideoClass({
     this.id,
@@ -349,28 +349,28 @@ class VideoClass {
 }
 
 class Response {
-  int? videoLibraryId;
-  String? guid;
-  String? title;
-  DateTime? dateUploaded;
-  int? views;
-  bool? isPublic;
-  int? length;
-  int? status;
-  double? framerate;
+  dynamic videoLibraryId;
+  dynamic guid;
+  dynamic title;
+  dynamic dateUploaded;
+  dynamic views;
+  dynamic isPublic;
+  dynamic length;
+  dynamic status;
+  dynamic framerate;
   dynamic rotation;
-  int? width;
-  int? height;
-  AvailableResolutions? availableResolutions;
-  int? thumbnailCount;
-  int? encodeProgress;
-  int? storageSize;
+  dynamic width;
+  dynamic height;
+  dynamic availableResolutions;
+  dynamic thumbnailCount;
+  dynamic encodeProgress;
+  dynamic storageSize;
   List<dynamic>? captions;
-  bool? hasMp4Fallback;
-  String? collectionId;
-  ThumbnailFileName? thumbnailFileName;
-  int? averageWatchTime;
-  int? totalWatchTime;
+  dynamic hasMp4Fallback;
+  dynamic collectionId;
+  dynamic thumbnailFileName;
+  dynamic averageWatchTime;
+  dynamic totalWatchTime;
   dynamic category;
   List<dynamic>? chapters;
   List<dynamic>? moments;
@@ -514,29 +514,29 @@ final thumbnailFileNameValues =
     EnumValues({"thumbnail.jpg": ThumbnailFileName.THUMBNAIL_JPG});
 
 class RecommendedMovie {
-  int? id;
+  dynamic id;
   LanguageDetail? languageDetail;
   CategoryDetail? categoryDetail;
   List<dynamic>? metaTags;
-  List<VideoClass>? videos;
-  VideoClass? video;
-  Message? message;
-  String? name;
-  String? slug;
-  String? description;
-  String? type;
+  List<dynamic>? videos;
+  dynamic video;
+  dynamic message;
+  dynamic name;
+  dynamic slug;
+  dynamic description;
+  dynamic type;
   dynamic totalLength;
-  String? collectionId;
-  String? thumbnail;
+  dynamic collectionId;
+  dynamic thumbnail;
   dynamic mobileThumbnail;
-  Video? freeVideo;
-  Video? rentVideo;
-  String? status;
-  DateTime? createdOn;
-  DateTime? updatedOn;
+  dynamic freeVideo;
+  dynamic rentVideo;
+  dynamic status;
+  dynamic createdOn;
+  dynamic updatedOn;
   dynamic admin;
-  int? category;
-  int? language;
+  dynamic category;
+  dynamic language;
   List<dynamic>? specs;
 
   RecommendedMovie({

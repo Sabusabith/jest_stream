@@ -3,11 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/get_core.dart';
 
 import 'package:get/get_instance/get_instance.dart';
 import 'package:get/get_navigation/get_navigation.dart';
+import 'package:shimmer/shimmer.dart';
 import 'package:zee_tv_app/Controllers/ApiControllers/OpenVideoController.dart';
 
 import 'package:zee_tv_app/Controllers/SelectedItemController.dart';
@@ -138,7 +140,7 @@ class Home1 extends StatelessWidget {
                                         //     selectedItemController.selectedItem.value == index
                                         //         ? Border.all(color: Colors.white, width: 3)
                                         //         : Border.all(),
-                                        onTap: () {
+                                        onTap: () async {
                                           String movie = listMoviesController
                                               .modelss!
                                               .blocks![mainindex]
@@ -147,6 +149,11 @@ class Home1 extends StatelessWidget {
                                               .toString();
 
                                           print(movie);
+                                          print(listMoviesController
+                                              .modelss!
+                                              .blocks![mainindex]
+                                              .movies![newindex]
+                                              .category);
                                           // String a = movie;
                                           // List<String> name = [];
                                           // name = a.split(".");
@@ -154,24 +161,60 @@ class Home1 extends StatelessWidget {
 
                                           selectedItemController
                                               .toggle(newindex);
-                                          openVideoController
+                                          await openVideoController
                                               .getMovieList(movie);
                                         },
                                         child: Padding(
-                                          padding: const EdgeInsets.all(5.0),
-                                          child: Image(
-                                            image: NetworkImage(
-                                                "http://api.ott.capcee.com" +
-                                                    listMoviesController
-                                                        .modelss!
-                                                        .blocks![mainindex]
-                                                        .movies![newindex]
-                                                        .thumbnail!),
-                                            fit: BoxFit.cover,
-                                            height: 180,
-                                            width: 100,
-                                          ),
-                                        ),
+                                            padding: const EdgeInsets.all(5.0),
+                                            child:
+                                                //  Image(
+                                                //   image: NetworkImage(
+                                                //       "http://api.ott.capcee.com" +
+                                                //           listMoviesController
+                                                //               .modelss!
+                                                //               .blocks![mainindex]
+                                                //               .movies![newindex]
+                                                //               .thumbnail!),
+                                                //   fit: BoxFit.cover,
+                                                //   height: 180,
+                                                //   width: 100,
+                                                // ),
+                                                CachedNetworkImage(
+                                              progressIndicatorBuilder:
+                                                  (context, url,
+                                                      downloadProgress) {
+                                                return Shimmer.fromColors(
+                                                    baseColor:
+                                                        Colors.grey[600]!,
+                                                    highlightColor:
+                                                        Colors.grey[100]!,
+                                                    child: Container(
+                                                        height: 200.0,
+                                                        width: double.infinity,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          color: Colors.white,
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(
+                                                                      8.0),
+                                                        )));
+                                              },
+                                              //  CircularProgressIndicator(value: downloadProgress.progress),
+                                              errorWidget:
+                                                  (context, url, error) =>
+                                                      Icon(Icons.error),
+                                              imageUrl:
+                                                  "http://api.ott.capcee.com" +
+                                                      listMoviesController
+                                                          .modelss!
+                                                          .blocks![mainindex]
+                                                          .movies![newindex]
+                                                          .thumbnail!,
+                                              fit: BoxFit.cover,
+                                              height: 180,
+                                              width: 100,
+                                            )),
                                       ),
                                     ],
                                   );

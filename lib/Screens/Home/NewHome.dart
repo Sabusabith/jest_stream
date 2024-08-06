@@ -19,14 +19,11 @@ class NewHome extends StatelessWidget {
   Widget build(BuildContext context) {
     SelectedItemController selectedItemController =
         Get.put(SelectedItemController());
-    HeadersController headersController = Get.put(HeadersController());
+   
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: Color(0xff202428),
-      body: Obx(
-        () => headersController.isLoadiing.value
-            ? Center(child: CircularProgressIndicator())
-            : SizedBox(
+      body: SizedBox(
                 width: size.width,
                 height: size.height,
                 child: NestedScrollView(
@@ -53,7 +50,7 @@ class NewHome extends StatelessWidget {
                               width: 500,
                               child: Row(
                                 children: List.generate(
-                                    headersController.data!.length, (index) {
+                                    4, (index) {
                                   return Row(
                                     children: [
                                       SizedBox(
@@ -79,19 +76,12 @@ class NewHome extends StatelessWidget {
                                                   index
                                               ? BorderRadius.circular(5)
                                               : BorderRadius.circular(0),
-                                          child: Obx(
-                                            () => headersController
-                                                    .isLoadiing.value
-                                                ? Center(
-                                                    child:
-                                                        CircularProgressIndicator())
-                                                : Container(
+                                          child: Container(
                                                     width: 80,
                                                     height: 35,
                                                     child: Center(
                                                       child: Text(
-                                                        headersController
-                                                            .data![index].name,
+                                                      "hello",
                                                         style: TextStyle(
                                                             fontSize: 13,
                                                             color: selectedItemController
@@ -103,7 +93,7 @@ class NewHome extends StatelessWidget {
                                                       ),
                                                     ),
                                                   ),
-                                          ),
+                                          
                                         ),
                                       ),
                                     ],
@@ -239,7 +229,7 @@ class NewHome extends StatelessWidget {
                   ),
                 ),
               ),
-      ),
+      
     );
   }
 

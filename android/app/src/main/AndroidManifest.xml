@@ -6,7 +6,7 @@
         <uses-feature
         android:required="false"
         android:name="android.hardware.touchscreen" />
-         <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:label="Jet_Stream"
         android:name="${applicationName}"

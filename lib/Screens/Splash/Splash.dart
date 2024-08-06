@@ -8,6 +8,7 @@ import 'package:zee_tv_app/Screens/Home/NewHome.dart';
 import 'package:zee_tv_app/Screens/Login/Login.dart';
 
 import '../../Controllers/ApiControllers/HeadersController.dart';
+import '../Login/Login2.dart';
 
 class Splash extends StatefulWidget {
   const Splash({super.key});

@@ -11,18 +11,18 @@ String moviesModelssModelToJson(MoviesModelssModel data) =>
     json.encode(data.toJson());
 
 class MoviesModelssModel {
-  int? id;
-  List<Block>? blocks;
-  String? name;
-  String? slug;
-  bool? isEditable;
-  bool? status;
+  dynamic id;
+  List<dynamic>? blocks;
+  dynamic name;
+  dynamic slug;
+  dynamic isEditable;
+  dynamic status;
   dynamic image;
-  DateTime? createdOn;
-  DateTime? updatedOn;
-  int? admin;
-  int? platform;
-  int? theme;
+  dynamic createdOn;
+  dynamic updatedOn;
+  dynamic admin;
+  dynamic platform;
+  dynamic theme;
 
   MoviesModelssModel({
     this.id,
@@ -80,22 +80,22 @@ class MoviesModelssModel {
 }
 
 class Block {
-  int? id;
-  bool? isEdit;
-  List<MetaTag>? metaTags;
-  List<Movie>? movies;
-  String? name;
-  String? inputType;
-  String? value;
+  dynamic id;
+  dynamic isEdit;
+  List<dynamic>? metaTags;
+  List<dynamic>? movies;
+  dynamic name;
+  dynamic inputType;
+  dynamic value;
   dynamic image;
-  String? movieType;
-  bool? status;
-  DateTime? createdOn;
-  DateTime? updatedOn;
-  int? page;
-  List<int>? languages;
-  List<int>? specs;
-  List<int>? categories;
+  dynamic movieType;
+  dynamic status;
+  dynamic createdOn;
+  dynamic updatedOn;
+  dynamic page;
+  List<dynamic>? languages;
+  List<dynamic>? specs;
+  List<dynamic>? categories;
 
   Block({
     this.id,
@@ -179,12 +179,12 @@ class Block {
 }
 
 class MetaTag {
-  int? id;
-  Label? label;
-  String? name;
-  DateTime? createdOn;
-  DateTime? updatedOn;
-  int? spec;
+  dynamic id;
+  dynamic label;
+  dynamic name;
+  dynamic createdOn;
+  dynamic updatedOn;
+  dynamic spec;
 
   MetaTag({
     this.id,
@@ -227,30 +227,30 @@ final labelValues = EnumValues({
 });
 
 class Movie {
-  int? id;
-  LanguageDetail? languageDetail;
-  CategoryDetail? categoryDetail;
-  List<MetaTag>? metaTags;
-  List<Video>? videos;
-  Video? video;
-  Message? message;
-  String? name;
-  String? slug;
-  String? description;
-  Type? type;
+  dynamic id;
+  dynamic languageDetail;
+  dynamic categoryDetail;
+  List<dynamic>? metaTags;
+  List<dynamic>? videos;
+  dynamic video;
+  dynamic message;
+  dynamic name;
+  dynamic slug;
+  dynamic description;
+  dynamic type;
   dynamic totalLength;
-  String? collectionId;
-  String? thumbnail;
+  dynamic collectionId;
+  dynamic thumbnail;
   dynamic mobileThumbnail;
-  FreeVideo? freeVideo;
-  RentVideo? rentVideo;
-  Status? status;
-  DateTime? createdOn;
-  DateTime? updatedOn;
-  int? admin;
-  int? category;
-  int? language;
-  List<int>? specs;
+  dynamic freeVideo;
+  dynamic rentVideo;
+  dynamic status;
+  dynamic createdOn;
+  dynamic updatedOn;
+  dynamic admin;
+  dynamic category;
+  dynamic language;
+  List<dynamic>? specs;
 
   Movie({
     this.id,
@@ -358,11 +358,11 @@ class Movie {
 }
 
 class CategoryDetail {
-  int? id;
-  int? links;
-  CategoryDetailName? name;
-  DateTime? createdOn;
-  DateTime? updatedOn;
+  dynamic id;
+  dynamic links;
+  dynamic name;
+  dynamic createdOn;
+  dynamic updatedOn;
   dynamic admin;
 
   CategoryDetail({
@@ -406,7 +406,7 @@ final categoryDetailNameValues = EnumValues({
 });
 
 class FreeVideo {
-  bool? isFree;
+  dynamic isFree;
 
   FreeVideo({
     this.isFree,
@@ -422,12 +422,12 @@ class FreeVideo {
 }
 
 class LanguageDetail {
-  int? id;
-  LanguageDetailName? name;
-  Code? code;
-  Position? position;
-  DateTime? createdOn;
-  DateTime? updatedOn;
+  dynamic id;
+  dynamic name;
+  dynamic code;
+  dynamic position;
+  dynamic createdOn;
+  dynamic updatedOn;
   dynamic admin;
 
   LanguageDetail({
@@ -488,11 +488,11 @@ final messageValues =
     EnumValues({"Resolution finished": Message.RESOLUTION_FINISHED});
 
 class RentVideo {
-  int? currency;
-  bool? isRent;
-  String? price;
-  String? validity;
-  String? duration;
+  dynamic currency;
+  dynamic isRent;
+  dynamic price;
+  dynamic validity;
+  dynamic duration;
 
   RentVideo({
     this.currency,
@@ -528,19 +528,19 @@ enum Type { MOVIE }
 final typeValues = EnumValues({"Movie": Type.MOVIE});
 
 class Video {
-  int? id;
-  String? videoUrlPlayer;
-  String? name;
+  dynamic id;
+  dynamic videoUrlPlayer;
+  dynamic name;
   dynamic videoUrl;
-  String? videoGuid;
-  Response? response;
-  int? oredrBy;
+  dynamic videoGuid;
+  dynamic response;
+  dynamic oredrBy;
   dynamic length;
   dynamic thumbnail;
-  Message? status;
-  DateTime? createdOn;
-  DateTime? updatedOn;
-  int? movie;
+  dynamic status;
+  dynamic createdOn;
+  dynamic updatedOn;
+  dynamic movie;
 
   Video({
     this.id,
@@ -598,29 +598,29 @@ class Video {
 }
 
 class Response {
-  int? videoLibraryId;
-  String? guid;
-  String? title;
-  DateTime? dateUploaded;
-  int? views;
-  bool? isPublic;
-  int? length;
-  int? status;
-  double? framerate;
-  int? rotation;
-  int? width;
-  int? height;
-  AvailableResolutions? availableResolutions;
-  int? thumbnailCount;
-  int? encodeProgress;
-  int? storageSize;
+  dynamic videoLibraryId;
+  dynamic guid;
+  dynamic title;
+  dynamic dateUploaded;
+  dynamic views;
+  dynamic isPublic;
+  dynamic length;
+  dynamic status;
+  dynamic framerate;
+  dynamic rotation;
+  dynamic width;
+  dynamic height;
+  dynamic availableResolutions;
+  dynamic thumbnailCount;
+  dynamic encodeProgress;
+  dynamic storageSize;
   List<dynamic>? captions;
-  bool? hasMp4Fallback;
-  String? collectionId;
-  ThumbnailFileName? thumbnailFileName;
-  int? averageWatchTime;
-  int? totalWatchTime;
-  Category? category;
+  dynamic hasMp4Fallback;
+  dynamic collectionId;
+  dynamic thumbnailFileName;
+  dynamic averageWatchTime;
+  dynamic totalWatchTime;
+  dynamic category;
   List<dynamic>? chapters;
   List<dynamic>? moments;
   List<dynamic>? metaTags;

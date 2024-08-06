@@ -11,7 +11,7 @@ class UrlLaunch extends StatefulWidget {
 }
 
 class _UrlLaunchState extends State<UrlLaunch> {
-  Uri? url = Uri.parse('http://videos.capcee.in/?theme=m1');
+  Uri? url = Uri.parse('http://testproject.capcee.com/tv/');
   @override
   void initState() {
     // TODO: implement initState
